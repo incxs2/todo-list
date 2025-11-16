@@ -1,9 +1,7 @@
 export class Note {
     constructor(title,description) {
         this.title = title;
-        this.description = description;
-        this.color = "#FFFFFF";
-        this.id = crypto.randomUUID();
+        this.description = description; 
     };
 };
 
@@ -12,7 +10,15 @@ export class Project {
         this.title = title;
         this.description = description;
         this.task = [];
-        this.id = crypto.randomUUID();
+        this.id = `id-${crypto.randomUUID()}`;
+        this.nextZ = 0;
     };
 };
 
+export class Task {
+    constructor(title,priority) {
+        this.title = title;
+        this.priority = priority;
+        this.id = `id-${crypto.randomUUID()}`
+    };
+};
